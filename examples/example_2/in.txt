@@ -1,0 +1,39 @@
+########################################	Beginer Users ###################################################
+
+Steps    20			    # Millions of trial movements per simulation
+
+Condensed_ini   0		# 0 for condensed, 1 for disperse initial system.
+Particles_Num   200		# Number of particles in the simulation (maximum 5000)
+Concentration_sys  0.01	# Density of the particles in 1/Angst^2.If a loop over temperature is set, this value is irrelevant.
+TempLoop	0		    # 1 if we want to perform a loop over different temperatures, 0 if not
+Temperature_sys   10	# Temperature in Kelvin. If a loop over temperature is set, this value is irrelevant.
+TempLoopStep	10		# Increment of Temperature between two consecutive steps, in absolute value
+TempLoopInit	10		# Initial Temperature of the loop
+TempLoopFin	100		    # Final Temperature of the loop
+
+
+############################################################################################################################
+######################################		Advanced Users ####################################################
+
+Processors   1			# Number of procesor used in the simulation (Max. 29)
+Epsilon_lj     0.01		# For the LJ and Morse potential, the well depth.
+Sigma_lj     3.4		# For the LJ potential, the distance where potential is 0, for the Morse potential, the bond distance
+          				# For hard spheres potential, the radius of the esphere
+CutofRadius  8.0		# Distance within the energies are estimated
+VerletRadius   13.0		# Radius for computing the Verlet list
+Nsampling   1000		# Number of measurements during the simulation
+Rneighbor   5.0			# Distance within the neigbors are taken into account
+Nneighbor	3		    # Number of neighbors for which an atom is considered in condensed state
+Rdensity	10		    # Radius used for the density distribution centered in each particle
+SpatialGrid  0.1		# Maximum displacement for T=1K. This displacement grows as T^(1/2)
+MaxSpatialGrid  1.5		# This value limits the spatial grid value to a maximum, even if T grows
+PotentialEnergy 1		# 1 for LJ potential, 2 for Morse potential, 3 for hard spheres
+WellWidth 1			    # The parameter that controls the width in the Morse potential (the bigger it is, more narrow poten.)
+ConcLoop	0		    # 1 if we want to perform a loop over different concentrations, 0 if not
+ConcLoopStep	2.0		# Rate between two consecutive concentration
+ConcLoopInit	0.001	# Initial concentration
+ConcLoopFin	0.01		# Final concentration
+Therm_ratio	0.7		    # Ratio between thermalization and total steps. 0 without thermalization, 0.9 long thermalization.
+NPotential	100000		# Number of points for the construction of the potential
+
+###############################################################################################################################

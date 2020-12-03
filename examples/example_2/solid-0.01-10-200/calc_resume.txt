@@ -1,0 +1,22 @@
+
+Steps:	20.000000
+Processors:	1.000000
+Particles_Num:	200.000000
+Concentration_sys:	0.010000
+Condensed_ini:	0.000000
+Temperature_sys:	10.000000
+Epsilon_lj:	0.010000
+Sigma_lj:	3.400000
+CutofRadius:	8.000000
+VerletRadius:	13.000000
+SpatialGrid:	0.100000
+MaxSpatialGrid:	1.500000
+Nsampling:	1000.000000
+Rneighbor:	5.000000
+Nneighbor:	3.000000
+Rdensity:	10.000000
+Therm_ratio:	0.700000
+NPotential:	100000.000000
+PotentialEnergy:	Lennard-Jones
+TempLoop:	0.000000
+ConcLoop:	0.000000

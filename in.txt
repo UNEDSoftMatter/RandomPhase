@@ -1,0 +1,48 @@
+﻿################### Initial users ############################################
+
+Steps		     10  # Millions of trial movements per simulation
+Condensed_ini         0  # 0 for condensed, 1 for disperse initial system
+Particles_Num       200  # Number of particles in the simulation (maximum 5000)
+Temperature_sys      55  # Temperature in Kelvin. This value is irrelevant if a
+                         # loop over temperatures is set.
+Concentration_sys  0.01	 # Density of the particles in 1/Angst^2. This value is
+                         # irrelevant if a loop over concentrations is set.
+TempLoop              0  # 1 to perform a loop over temperatures, 0 if not
+
+TempLoopStep         10  # Increment between two temperature steps (absolute value)
+TempLoopInit         10  # Initial Temperature of the loop
+TempLoopFin         100  # Final Temperature of the loop
+
+
+##############################################################################
+################### Advanced Users ###########################################
+
+Processors          1 # Number of procesor used in the simulation (Max. 29)
+NPotential     100000 # Number of points of the grid of the potential
+PotentialEnergy     1 # 1: LJ potential; 2: Morse potential; 3: hard spheres
+WellWidth           1 # The parameter that controls the width in the Morse
+                      # potential (if bigger, the potential is narrower)
+Epsilon_lj   	 0.01 # For the LJ and Morse potential, the well depth.
+Sigma_lj     	  3.4 # For the LJ potential, the distance where potential is 0
+                      # For the Morse potential, the bond distance
+                      # For hard spheres potential, the radius of the spheres
+CutofRadius  	  8.0 # Distance within the energies are estimated
+VerletRadius 	 13.0 # Radius for computing the Verlet list
+Nsampling   	 1000 # Number of measurements during the simulation
+Rneighbor   	  5.0 # Distance within the neigbors are taken into account
+Nneighbor	    3 # Number of neighbors for which an atom is considered
+                      # to be in condensed state
+Rdensity    	   10 # Radius used for the density distribution centered in
+                      # each particle
+SpatialGrid       0.1 # Maximum displacement for T=1K ( grows as T^(1/2) )
+MaxSpatialGrid    1.5 # This value limits the spatial grid value to a maximum,
+                      # even if T grows
+ConcLoop       0      # 1 to perform a loop over concentrations, 0 if not
+ConcLoopStep   0.01   # Increment between two consecutive concentration
+ConcLoopInit   0.01   # Initial concentration
+ConcLoopFin    0.05   # Final concentration
+		      #	
+Therm_ratio    0.7    # Ratio between thermalization and total steps.
+                      # 0 means no thermalization; 0.9 long thermalization.
+
+##############################################################################
