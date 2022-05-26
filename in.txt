@@ -1,48 +1,29 @@
-﻿################### Initial users ############################################
 
-Steps		     10  # Millions of trial movements per simulation
-Condensed_ini         0  # 0 for condensed, 1 for disperse initial system
-Particles_Num       200  # Number of particles in the simulation (maximum 5000)
-Temperature_sys      55  # Temperature in Kelvin. This value is irrelevant if a
-                         # loop over temperatures is set.
-Concentration_sys  0.01	 # Density of the particles in 1/Angst^2. This value is
-                         # irrelevant if a loop over concentrations is set.
-TempLoop              0  # 1 to perform a loop over temperatures, 0 if not
+Procesors  2			Steps    100			Particles_Num   1000		Concentration_sys  1.3				
+Temperature_sys  1.0		Type_Of_Run	1		Ensemble_MC	1		Ensemble_MC	1
+System_Dimension	2	Rotating_Particle	1	PotentialEnergy 1		Electric_Dipole	0
+Potential_Analytic	1	Potential_Table	0	Potential_out	0		LJ_units	1
+Epsilon_lj     1.0		Sigma_lj     1.0		Elipse_Sigma	1		Epsilon_EndEnd	0.8
+Epsilon_SidSid	1.2		Sigma_Par	1.4		Sigma_Perp	0.6		Mu_Elipse	1.0
+Nu_Elipse	1.0		Condensed_ini	2  		Restart_ini	0		Random_Orientation	1
+Init_Cell_Ratio	1.73	Disorder_Seed	0		Rdf_Precision	0.03		CuttofRadius  4.0
+VerletRadius   7.0		Rneighbor   1.45		Nneighbor	3		Rdensity	10.0	
+SpatialGrid  0.05		MaxSpatialGrid  0.05		Rejilla_Ang	5.0		Voronoi_Construction	0
+Rigid_mol	0		Snapshot_freq	10		Nsampling  1000		Therm_ratio	0.6
+Defect_Calculation	1
+	
+	
 
-TempLoopStep         10  # Increment between two temperature steps (absolute value)
-TempLoopInit         10  # Initial Temperature of the loop
-TempLoopFin         100  # Final Temperature of the loop
 
 
-##############################################################################
-################### Advanced Users ###########################################
 
-Processors          1 # Number of procesor used in the simulation (Max. 29)
-NPotential     100000 # Number of points of the grid of the potential
-PotentialEnergy     1 # 1: LJ potential; 2: Morse potential; 3: hard spheres
-WellWidth           1 # The parameter that controls the width in the Morse
-                      # potential (if bigger, the potential is narrower)
-Epsilon_lj   	 0.01 # For the LJ and Morse potential, the well depth.
-Sigma_lj     	  3.4 # For the LJ potential, the distance where potential is 0
-                      # For the Morse potential, the bond distance
-                      # For hard spheres potential, the radius of the spheres
-CutofRadius  	  8.0 # Distance within the energies are estimated
-VerletRadius 	 13.0 # Radius for computing the Verlet list
-Nsampling   	 1000 # Number of measurements during the simulation
-Rneighbor   	  5.0 # Distance within the neigbors are taken into account
-Nneighbor	    3 # Number of neighbors for which an atom is considered
-                      # to be in condensed state
-Rdensity    	   10 # Radius used for the density distribution centered in
-                      # each particle
-SpatialGrid       0.1 # Maximum displacement for T=1K ( grows as T^(1/2) )
-MaxSpatialGrid    1.5 # This value limits the spatial grid value to a maximum,
-                      # even if T grows
-ConcLoop       0      # 1 to perform a loop over concentrations, 0 if not
-ConcLoopStep   0.01   # Increment between two consecutive concentration
-ConcLoopInit   0.01   # Initial concentration
-ConcLoopFin    0.05   # Final concentration
-		      #	
-Therm_ratio    0.7    # Ratio between thermalization and total steps.
-                      # 0 means no thermalization; 0.9 long thermalization.
 
-##############################################################################
+		# Number of measurements realized between two consecutive snapshots.
+			# Number of measurements during the simulation
+Clusters	0		# 1 if the aggregate size is computed, 0 if not
+		# Ratio between thermalization and total steps. 0 without thermalization, 0.9 long thermalization.
+Energy_Map	0		# 1 if potential energy map is calculated, 0 if not.
+	# 1 for defect analisys is performed, 0 if not.
+
+	
+
